@@ -13,3 +13,4 @@ A react-fastapi-postgres app for my personal testing
 ## Steps needed to build from scratch
 1. First build the frontend using `cd frontend && npm create vite@latest vite-react-app -- --template react-ts && cd vite-react-app && npm install`
 2. Create a virtual environment and install fastapi and uvicorn `cd backend && python3.11 -m venv venv && source venv/bin/activate/ && pip install fastapi uvicorn && pip freeze > requirements.txt`
+3. You can currently run the `docker-compose.dev.yml` file, given you have the `.env` file ;) `docker-compose -f docker-compose.dev.yml up -d --build` to build and `docker-compose -f docker-compose.dev.yml down -v` to bring it all down
