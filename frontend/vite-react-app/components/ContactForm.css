@@ -1,0 +1,73 @@
+/* ContactForm.module.css or App.css */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #282c34; /* Assuming you want a dark background similar to the uploaded image */
+  }
+  
+  .contact-form {
+    width: 100%;
+    max-width: 500px;
+    background: #fff; /* White background for the form to contrast with the dark container */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .contact-form label {
+    display: block;
+    color: #000; /* Black color labels for readability */
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    /* Adjust the background and text color for better readability */
+    background-color: #f7f7f7; /* Light background for inputs */
+    color: #333; /* Dark text for inputs */
+  }
+  
+  .contact-form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none; /* Remove border for the button */
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  /* Additional styles to ensure visibility of placeholders */
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #666; /* Darker placeholder text */
+  }
+  
+  /* Style the form elements when they are invalid */
+  .contact-form input:invalid,
+  .contact-form textarea:invalid {
+    border-color: #e74c3c; /* Red border for invalid input */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .contact-form-container {
+      padding: 10px;
+    }
+    .contact-form {
+      padding: 15px;
+    }
+  }
+  

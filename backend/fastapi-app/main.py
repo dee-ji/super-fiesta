@@ -47,6 +47,16 @@ class UpdateContactForm(BaseModel):
     email: str = None
     message: str = None
 
+class ContactResponse(BaseModel):
+    id: int
+    name: str
+    email: str
+    message: str
+
+    class Config:
+        orm_mode = True
+
+
 @app.get("/")
 def read_root():
     return {"message": "Hello, World!"}
@@ -59,7 +69,7 @@ async def startup():
 async def shutdown():
     await database.disconnect()
 
-@app.get("/contacts/", response_model=List[ContactForm])
+@app.get("/contacts/", response_model=List[ContactResponse])
 async def read_contacts(skip: int = 0, limit: int = 100):
     query = select(Contact).offset(skip).limit(limit)
     return await database.fetch_all(query)
