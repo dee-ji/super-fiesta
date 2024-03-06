@@ -11,6 +11,26 @@ A react-fastapi-postgres app for my personal testing
 - [ ] Bonus: Build a Hashicorp Vault to store environment variables
 
 ## Steps needed to build from scratch
-1. First build the frontend using `cd frontend && npm create vite@latest vite-react-app -- --template react-ts && cd vite-react-app && npm install`
-2. Create a virtual environment and install fastapi and uvicorn `cd backend && python3.11 -m venv venv && source venv/bin/activate/ && pip install fastapi uvicorn && pip freeze > requirements.txt`
-3. You can currently run the `docker-compose.dev.yml` file, given you have the `.env` file ;) `docker-compose -f docker-compose.dev.yml up -d --build` to build and `docker-compose -f docker-compose.dev.yml down -v` to bring it all down
+1. First build the frontend using the following commands: 
+```bash
+cd frontend && \
+    npm create vite@latest vite-react-app -- --template react-ts && \
+    cd vite-react-app && \
+    npm install
+```
+2. Create a virtual environment and install fastapi and uvicorn: 
+```bash
+cd backend && \
+    python3.11 -m venv venv && \
+    source venv/bin/activate/ && \
+    pip install fastapi uvicorn && \
+    pip freeze > requirements.txt
+```
+3. You can currently run the `docker-compose.dev.yml` file, given you have the `.env` file ;)
+```bash
+docker-compose -f docker-compose.dev.yml up -d --build
+``` 
+4. To bring it all down
+```bash
+docker-compose -f docker-compose.dev.yml down -v
+```
